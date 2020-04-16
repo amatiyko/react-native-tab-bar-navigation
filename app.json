@@ -1,0 +1,17 @@
+{
+  "name": "react-native-tab-bar-navigation",
+  "displayName": "react-native-tab-bar-navigation",
+  "expo": {
+    "name": "react-native-tab-bar-navigation",
+    "slug": "react-native-tab-bar-navigation",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
