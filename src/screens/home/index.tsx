@@ -1,13 +1,17 @@
 import React from 'react';
 
-import { Container, Header } from './styles';
+import { Container, TopPart, TopPartContainer, Header } from './styles';
 
 function HomeScreen() {
   return (
     <Container>
-      <Header>Home screen</Header>
+      <TopPartContainer>
+        <TopPart>
+          <Header>Home screen</Header>
+        </TopPart>
+      </TopPartContainer>
     </Container>
-  )
+  );
 }
 
 export default HomeScreen;
