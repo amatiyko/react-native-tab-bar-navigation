@@ -1,8 +1,17 @@
 import { Dimensions } from 'react-native';
 import * as d3 from 'd3-shape';
+import { HOME, LIST, TASK, TRANSFER, PROFILE } from '../../constants/routes';
 
-const { width } = Dimensions.get('window');
-const height = 70;
+export const { width } = Dimensions.get('window');
+export const height = 50;
+
+export const routeIcon = {
+  [HOME]: 'home',
+  [LIST]: 'list',
+  [TASK]: 'crosshair',
+  [TRANSFER]: 'navigation',
+  [PROFILE]: 'user',
+};
 
 export const getShape = (tabWidth: number) => {
   const leftTopLine = d3
@@ -15,22 +24,22 @@ export const getShape = (tabWidth: number) => {
     .x(([x]) => x)
     .y(([, y]) => y)
     .curve(d3.curveBundle)([
-    [width, 0],
-    [width + 5, 0],
-    [width + 10, 10],
-    [width + 20, height - 20],
-    [width + tabWidth - 20, height - 20],
-    [width + tabWidth - 10, 10],
-    [width + tabWidth - 5, 0],
-    [width + tabWidth, 0],
+    [width - 7, 0],
+    [width - 7 + 5, 0],
+    [width - 7  + 10, 10],
+    [width - 7  + 20, height + 5],
+    [width + 7 + tabWidth - 20, height + 5],
+    [width + 7 + tabWidth - 10, 10],
+    [width + 7 + tabWidth - 5, 0],
+    [width + 7 + tabWidth, 0],
   ]);
 
   const rightTopLine = d3
     .line()
     .x(([x]) => x)
     .y(([, y]) => y)([
-    [width * 2, 0],
-    [width * 2, height],
+    [width * 2 + tabWidth, 0],
+    [width * 2 + tabWidth, height],
     [0, height],
     [0, 0],
   ]);

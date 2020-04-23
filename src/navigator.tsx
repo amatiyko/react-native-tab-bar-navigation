@@ -23,9 +23,9 @@ function Navigator() {
           headerShown: false
         }}
       >
-        <Tab.Screen name={HOME} component={HomeScreen} />
         <Tab.Screen name={LIST} component={ListScreen} />
         <Tab.Screen name={TASK} component={TaskScreen} />
+        <Tab.Screen name={HOME} component={HomeScreen} />
         <Tab.Screen name={TRANSFER} component={TransferScreen} />
         <Tab.Screen name={PROFILE} component={ProfileScreen} />
       </Tab.Navigator>

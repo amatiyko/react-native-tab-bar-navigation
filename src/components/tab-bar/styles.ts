@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
+import { width } from './helpers';
 
 export const Container = styled.View`
-  flex-direction: row;
+  height: 50px;
 `;
