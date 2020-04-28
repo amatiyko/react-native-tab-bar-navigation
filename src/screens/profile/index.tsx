@@ -1,16 +1,10 @@
 import React from 'react';
 
-import { Container, TopPart, TopPartContainer, Header } from './styles';
+import ScreenStructure from '../screen-structure';
 
 function ProfileScreen() {
   return (
-    <Container>
-      <TopPartContainer>
-        <TopPart>
-          <Header>Profile screen</Header>
-        </TopPart>
-      </TopPartContainer>
-    </Container>
+    <ScreenStructure headerText="Profile screen" />
   );
 }
 

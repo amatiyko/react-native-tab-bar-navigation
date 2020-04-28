@@ -16,6 +16,7 @@ import Buttons from './Buttons';
 
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { transform } from '@babel/core';
+import { PRIMARY } from '../../constants/colors';
 
 const { width } = Dimensions.get('window');
 const height = 50;
@@ -47,14 +48,14 @@ class TabBar extends PureComponent<BottomTabBarProps> {
           <AnimatedSvg
             width={width * 2 + tabWidth}
             {...{ height }}
-            fill="#4c7cf7"
+            fill={PRIMARY}
             style={{transform: [{ translateX: this.value }]}}
           >
             <Path d={getShape(this.getTabWidth())} />
           </AnimatedSvg>
-          <Buttons {...this.props} onPress={this.onPress} />
+          <Buttons value={this.value} {...this.props} onPress={this.onPress} />
         </Container>
-        <SafeAreaView style={{ backgroundColor: '#4c7cf7' }} />
+        <SafeAreaView style={{ backgroundColor: PRIMARY }} />
       </>
     );
   }

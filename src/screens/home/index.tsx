@@ -1,16 +1,13 @@
 import React from 'react';
 
-import { Container, TopPart, TopPartContainer, Header } from './styles';
+import ScreenStructure from '../screen-structure';
 
 function HomeScreen() {
   return (
-    <Container>
-      <TopPartContainer>
-        <TopPart>
-          <Header>Home screen</Header>
-        </TopPart>
-      </TopPartContainer>
-    </Container>
+    <ScreenStructure
+      headerText="Home screen"
+      description="Switch between different section of the app with tab animation"
+    />
   );
 }
 

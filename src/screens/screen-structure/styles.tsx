@@ -1,23 +1,24 @@
 import styled from 'styled-components/native';
 import { Dimensions } from 'react-native';
+import { PRIMARY, WHITE } from '../../constants/colors';
 
 const window = Dimensions.get('window');
 
 export const Container = styled.View`
   flex: 1;
-  background-color: #ffffff;
+  background-color: ${WHITE};
 `;
 
 export const TopPartContainer = styled.View`
   flex: 0.5;
-  background-color: #ffffff;
+  background-color: ${WHITE};
 `;
 
 export const TopPart = styled.View`
   align-items: center;
   justify-content: flex-end;
   padding-bottom: ${window.width / 2}px;
-  background-color: #4c7cf7;
+  background-color: ${PRIMARY};
   width: ${window.width * 2}px;
   height: ${window.width * 2}px;
   position: absolute;
@@ -27,6 +28,19 @@ export const TopPart = styled.View`
 `;
 
 export const Header = styled.Text`
-  color: #ffffff;
+  color: ${WHITE};
   font-size: 30px;
+  font-weight: 600;
+`;
+
+export const DescriptionWrapper = styled.View`
+  width: ${window.width};
+`;
+
+export const Description = styled.Text`
+  color: ${WHITE};
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 40px;
+  padding: 0 40px;
 `;
